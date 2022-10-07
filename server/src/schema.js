@@ -41,7 +41,7 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     contacts: () => contacts_data,
-    contact(parent, args, context, info) {
+    contact: (root, args) => {
       return find(contacts_data, { id: args.id })
     }
   },
