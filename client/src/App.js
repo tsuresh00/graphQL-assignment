@@ -1,26 +1,33 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './App.css';
+import { BASE_URL } from './config/config';
+import DetailPage from './Pages/DetailePage';
+import MainPage from './Pages/MainPage';
 
-import './App.css'
-
-import Title from './components/layout/Title'
-import AddContact from './components/forms/AddContact'
-import Contacts from './components/lists/Contacts'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: BASE_URL,
   cache: new InMemoryCache()
 })
 
-const App = () => {
+
+function App() {
   return (
     <ApolloProvider client={client}>
-      <div className='App'>
-        <Title />
-        <AddContact />
-        <Contacts />
-      </div>
+    <div className='mainwraper'>
+    <BrowserRouter>
+        <Routes>
+          {/* Home Page */}
+          <Route path="/" element={<MainPage />} />
+          {/* Detail Page */}
+          <Route path="/pesrson/:personId" element={<DetailPage />} />
+        </Routes>
+      </BrowserRouter>
+    
+    </div>
     </ApolloProvider>
-  )
+  );
 }
 
-export default App
+export default App;

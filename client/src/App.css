@@ -1,41 +1,98 @@
-@import '~antd/dist/antd.css';
+.mainheading{
+  text-align: center;
+}
 
-.App {
-  align-items: center;
+.mainwraper{
   border: 4px solid black;
-  display: flex;
-  flex-direction: column;
-  margin: 100px auto;
-  padding: 40px;
-  width: 70%;
+  margin: 100px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.devider{
+  border-bottom: 1px solid grey;
+  margin: 0 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subheading{
+  text-align: center;
+}
+
+.separator {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin: 0 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+
+.addpersondiv{
+  text-align: center;
+}
+
+.p10{
+  padding: 10px;
+}
+
+.m10{
+  margin: 10px;
+}
+
+.ml5{
+  margin-left: 5px;
+}
+
+.inpt{
+  height: 30px;
+}
+
+.addbtn{
+  height: 30px;
+}
+
+.recordcard{
+  display: flex;
+  border: 1px solid grey;
+  min-height: 100px;
+  margin: 30px;
+  flex-direction: column;
+}
+
+.recheading{
+  padding: 5px;
+  border-bottom: 1px solid grey;
+  height: 30px;
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.carcard{
+  display: flex;
+  border: 1px solid grey;
+  /* height: 100px; */
+  margin: 10px 30px;
+  flex-direction: column;
+}
+.carheading{
+  padding: 5px;
+  border-bottom: 1px solid grey;
+  height: 30px;
+  width: 100%;
+}
+
+.m0{
+  margin: 0;
 }

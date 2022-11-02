@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "main": "server.js",
-  "author": "Paul Lam",
+  "author": "Thushara",
   "license": "MIT",
   "scripts": {
     "start": "nodemon --exec babel-node server.js",
